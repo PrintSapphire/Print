@@ -16,6 +16,10 @@ module.exports = {
             800: '#6B21A8',
           },
         },
+        fontFamily: {
+          sora: ['Sora', 'sans-serif'],
+          'dm-sans': ['"DM Sans"', 'sans-serif'],
+        },
       },
     },
     plugins: [],
