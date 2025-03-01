@@ -1,8 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const Services = () => {
-  const services = [
+// src/data/services.js
+export const services = [
     { name: "Glow Sign & LED Board Fire Exit Radium Sign", image: "/assets/Glow Sign & LED.png", id: "glow-sign-led" },
     { name: "Outdoor Wall Graphic", image: "/assets/Outdoor Wall Graphic.png", id: "outdoor-wall-graphic" },
     { name: "Dugout Branding", image: "/assets/Dugout Branding.png", id: "dugout-branding" },
@@ -28,35 +25,3 @@ const Services = () => {
     { name: "Promotion Standee & Kiosk", image: "/assets/Promotion Standee & Kiosk.png", id: "promotion-standee-kiosk" },
     { name: "Frosted print on glass door and partition", image: "/assets/image.png", id: "frosted-glass-print" },
   ];
-
-  return (
-    <div id="services" className="py-15 bg-purple-100">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {services.map((service) => (
-            <Link
-              to={`/services/${service.id}`}
-              key={service.id}
-              className="bg-white p-4 rounded-lg shadow-md transition-all duration-300 transform hover:shadow-xl hover:scale-105 hover:bg-purple-50 border border-purple-200"
-            >
-              <div className="w-full h-48 mb-4 overflow-hidden rounded bg-gray-500 flex items-center justify-center">
-                <img
-                  src={service.image}
-                  alt={service.name}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                  onError={(e) => {
-                    e.target.src = '/assets/placeholder.jpg';
-                  }}
-                />
-              </div>
-              <h3 className="text-lg font-semibold text-center text-gray-800">{service.name}</h3>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Services;
