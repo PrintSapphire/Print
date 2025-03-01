@@ -25,17 +25,18 @@ const Services = () => {
     { name: "Customized Bags", image: "/assets/Customized Bags.png" },
     { name: "Novelties", image: "/assets/Novelties.png" },
     { name: "Promotion Standee & Kiosk", image: "/assets/Promotion Standee & Kiosk.png" },
+    { name: "Frosted print on glass door and partition", image: "/assets/image.png" },
   ];
 
   return (
-    <div id="services" className="py-16 bg-gray-50">
+    <div id="services" className="py-16 bg-purple-100">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200"
+              className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-purple-200"
             >
               <div className="w-full h-48 mb-4 overflow-hidden rounded bg-gray-500 flex items-center justify-center">
                 <img

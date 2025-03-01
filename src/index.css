@@ -17,3 +17,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.marquee-container {
+  overflow: hidden;
+}
+.marquee-content {
+  animation: marquee 20s linear infinite; /* Slower speed for more images */
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

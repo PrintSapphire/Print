@@ -31,23 +31,50 @@
 
 // export default App;
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Header';
 import Hero from './components/HeroSection';
 import Services from './components/ServicesSection';
 import About from './components/AboutUsSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Loading from './components/Loading';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    // Set a timer to start fading out after 2.5 seconds, then hide after 3 seconds
+    const fadeTimer = setTimeout(() => {
+      setIsFading(true);
+    }, 700); // Start fading after 1 seconds
+
+    const hideTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1200); // Hide completely after 1.5 seconds
+
+    // Cleanup timers on component unmount
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <Services />
-      <About />
-      <Contact />
-      <Footer />
+    <div className="min-h-screen bg-gray-100">
+      {isLoading ? (
+        <Loading isFading={isFading} />
+      ) : (
+        <>
+          <Navbar />
+          <Hero />
+          <Services />
+          <About />
+          <Contact />
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

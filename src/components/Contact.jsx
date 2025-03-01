@@ -18,11 +18,11 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="py-16 bg-white">
+    <div id="contact" className="py-16 bg-purple-100">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-purple-50 p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md border border-purple-200">
             <h3 className="text-xl font-semibold mb-4 text-gray-800">Get in Touch</h3>
             <p className="mb-2 text-gray-600">Phone: 9811512018, 7908331875</p>
             <p className="mb-2 text-gray-600">Email: printsapphire25@gmail.com</p>
@@ -31,7 +31,7 @@ const Contact = () => {
               I.P. Extn., Delhi-92
             </p>
           </div>
-          <form onSubmit={handleSubmit} className="space-y-4 bg-purple-50 p-6 rounded-lg shadow-md">
+          <form onSubmit={handleSubmit} className="space-y-4 bg-white p-6 rounded-lg shadow-md border border-purple-200">
             <div>
               <input
                 type="text"

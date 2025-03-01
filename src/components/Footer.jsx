@@ -2,11 +2,14 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className="bg-purple-800 text-white py-8"> {/* Darker purple for footer */}
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-4 text-purple-400">Print Sapphire</h3>
-          <p className="text-gray-300">Where Print Meets Excellence</p>
+        <img
+          src="/assets/print.png" // Replace with your actual image filename in public/assets
+          alt="Print Sapphire Logo"
+          className="h-10 w-auto" // Adjust height as needed to fit the design
+        />
         </div>
         <div>
           <h4 className="font-semibold mb-4 text-gray-200">Company</h4>
