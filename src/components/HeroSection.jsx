@@ -6,7 +6,7 @@ const Hero = () => {
     "/assets/Backlit Signages.png",
     "/assets/Boundary Rope.png",
     "/assets/Car Wrapping.png",
-    "/assets/Customized Bags.png", 
+    "/assets/Customized Bags.png",
     "/assets/Dugout Branding.png",
     "/assets/Event Backdrop.png",
     "/assets/Fleet Graphics.png",
@@ -67,7 +67,7 @@ const Hero = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {/* Best Quality */}
-            <div className=" p-6   flex flex-col items-center text-center">
+            <div className="p-6 bg-white bg-opacity-20 backdrop-blur-md rounded-lg shadow-md flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105 hover:shadow-xl">
               <div className="mb-4">
                 <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="62" height="62" rx="8" fill="#F3F3FF"/>
@@ -79,7 +79,7 @@ const Hero = () => {
             </div>
 
             {/* Secure Payment */}
-            <div className="p-6   flex flex-col items-center text-center">
+            <div className="p-6 bg-white bg-opacity-20 backdrop-blur-md rounded-lg shadow-md flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105 hover:shadow-xl">
               <div className="mb-4">
                 <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="62" height="62" rx="8" fill="#F3F3FF"/>
@@ -92,7 +92,7 @@ const Hero = () => {
             </div>
 
             {/* Professional */}
-            <div className="p-6   flex flex-col items-center text-center">
+            <div className="p-6 bg-white bg-opacity-20 backdrop-blur-md rounded-lg shadow-md flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105 hover:shadow-xl">
               <div className="mb-4">
                 <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="62" height="62" rx="8" fill="#F3F3FF"/>
@@ -114,7 +114,7 @@ const Hero = () => {
             </div>
 
             {/* Competitive Pricing */}
-            <div className="p-6   flex flex-col items-center text-center">
+            <div className="p-6 bg-white bg-opacity-20 backdrop-blur-md rounded-lg shadow-md flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105 hover:shadow-xl">
               <div className="mb-4">
                 <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="62" height="62" rx="8" fill="#F3F3FF"/>

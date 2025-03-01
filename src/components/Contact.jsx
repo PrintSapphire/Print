@@ -55,20 +55,20 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Transparent Get in Touch Section without Border */}
           <div className="bg-white bg-opacity-20 backdrop-blur-md p-8 rounded-xl shadow-lg flex flex-col justify-between h-full transform hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-2xl font-semibold mb-2 text-purple-800 text-center">Get in Touch</h3>
+            <h3 className="text-2xl font-semibold mb-2 text-purple-800 text-center transition-transform duration-300 transform hover:scale-105">Get in Touch</h3>
             <div className="flex-grow flex flex-col justify-center space-y-10 text-gray-800">
               <div className="flex items-center justify-start space-x-9">
                 <span className="material-icons text-purple-600 text-2xl">Phone:</span>
-                <p className="text-lg text-purple-800 transition-colors duration-300 hover:text-black hover">9811512018, 7908331875</p>
+                <p className="text-lg text-purple-800 transition-colors duration-300 hover:text-purple hover transition-transform duration-300 transform hover:scale-105">9811512018, 7908331875</p>
               </div>
               <div className="flex items-center justify-start space-x-12">
                 <span className="material-icons text-purple-600 text-2xl">Email:</span>
-                <p className="text-lg text-purple-800 transition-colors duration-300 hover:text-black hover">printsapphire25@gmail.com</p>
+                <p className="text-lg text-purple-800 transition-colors duration-300 hover:text-purple hover transition-transform duration-300 transform hover:scale-105">printsapphire25@gmail.com</p>
               </div>
               <div className="flex items-center justify-start space-x-3">
                 <span className="material-icons text-purple-600 text-2xl">Location:</span>
-                <p className="leading-tight text-lg text-purple-800 transition-colors duration-300 hover:text-black hover">
-                  <span>B-37, Street No.-15, MadhuVihar, I.P. Extn, Delhi-92</span>
+                <p className="leading-tight text-lg text-purple-800 transition-colors duration-300 hover:text-purple hover transition-transform duration-300 transform hover:scale-105">
+                  <span >B-37, Street No.-15, MadhuVihar, I.P. Extn, Delhi-92</span>
                 </p>
               </div>
             </div>

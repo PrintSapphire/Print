@@ -6,7 +6,7 @@ const About = () => {
       {" "}
       {/* Lighter purple background for the section */}
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 text-purple-800">
           About Us
         </h2>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
@@ -55,18 +55,18 @@ const About = () => {
             <div className="space-y-6">
               {/* Our Infrastructure */}
               <div>
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4 ">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-purple-800 ">
                   Our Infrastructure
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-relaxed text-purple-600">
                   We utilize state-of-the-art solvent and eco-solvent printing
                   machines with a capacity of up to 26,000 sq.ft of solvent
                   printing and 2,400 sq.ft of eco-solvent printing daily.
                 </p>
-                <h4 className="font-semibold text-gray-800 mt-4 mb-2">
+                <h4 className="font-semibold text-gray-800 mt-4 mb-2 text-purple-800">
                   Machines in Use:
                 </h4>
-                <ul className="list-disc pl-6 text-gray-700">
+                <ul className="list-disc pl-6 text-gray-700 text-purple-600">
                   <li>Colorjet POLO HQ Eco-Solvent Printer (10' width)</li>
                   <li>Colorjet Irisjet PRO Solvent Printer</li>
                   <li>Roland RF-640A Eco Solvent Printer</li>
@@ -78,10 +78,10 @@ const About = () => {
 
               {/* Designing */}
               <div className="mt-8">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-purple-800">
                   Designing
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-relaxed text-purple-600">
                   Our team of highly qualified and experienced designers uses
                   the latest software and cutting-edge machinery to deliver
                   exceptional and precise designs for any project scale.
