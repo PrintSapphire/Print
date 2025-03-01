@@ -44,7 +44,7 @@ const Hero = () => {
         </div>
 
         {/* Right Section - Marquee */}
-        <div className="md:w-1/2 w-full h-64 overflow-hidden relative">
+        <div className="md:w-1/2 w-full h-64 overflow-hidden relative bg-white rounded-lg shadow-md">
           <div className="absolute inset-0 flex items-center">
             <div className="marquee-content flex space-x-6 animate-marquee">
               {[...productImages, ...productImages].map((image, index) => (

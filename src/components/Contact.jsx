@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser'; // Import EmailJS
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,14 +8,43 @@ const Contact = () => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // For success/error messages
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Add your form submission logic here
+    setIsSubmitting(true);
+    setSubmitStatus(null); // Reset status
+
+    // EmailJS configuration (replace with your actual EmailJS credentials)
+    const serviceId = 'service_n2urts6'; // Replace with your EmailJS Service ID
+    const templateId = 'template_s1pfr8t'; // Replace with your EmailJS Template ID
+    const publicKey = 'Nyw-aq0wxwPzckJqe'; // Replace with your EmailJS Public Key
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      to_email: 'aoman5217@gmail.com' // Destination email
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        setSubmitStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' }); // Reset form
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        setSubmitStatus('Failed to send message. Please try again.');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -66,10 +96,16 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700"
+              className={`bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+              disabled={isSubmitting}
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
+            {submitStatus && (
+              <p className={`mt-4 ${submitStatus.includes('successfully') ? 'text-green-600' : 'text-red-600'}`}>
+                {submitStatus}
+              </p>
+            )}
           </form>
         </div>
       </div>
