@@ -3,37 +3,36 @@ import React from "react";
 const About = () => {
   return (
     <div id="about" className="py-16 bg-purple-100">
-      {" "}
-      {/* Lighter purple background for the section */}
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 text-purple-800">
+        <h2 className="text-4xl font-bold text-center mb-12 text-purple-800">
           About Us
         </h2>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
-          {" "}
-          {/* Wider container, flex for image and content */}
-          {/* Left Side - Image with Overlay */}
+          {/* Left Side - Video with Overlay */}
           <div className="relative w-[488px] h-[600px] bg-violet-50 rounded-2xl overflow-hidden">
-  {/* Background Ellipses */}
-  <div className="absolute inset-0">
-    <div className="absolute w-[484px] h-[484px] left-[-215px] top-[-246px] bg-indigo-400 rounded-full z-0" />
-    <div className="absolute w-[362px] h-[362px] left-[307px] top-[265px] bg-red-300 rounded-full z-0" />
-  </div>
+            {/* Background Ellipses */}
+            <div className="absolute inset-0">
+              <div className="absolute w-[484px] h-[484px] left-[-215px] top-[-246px] bg-indigo-400 rounded-full z-0" />
+              <div className="absolute w-[362px] h-[362px] left-[307px] top-[265px] bg-red-300 rounded-full z-0" />
+            </div>
 
-  {/* Office Image (placed on top) */}
-  <img
-    src="/assets/office.png"
-    alt="Print Sapphire Office"
-    className="absolute inset-0 w-[450px] h-[550px] top-[25px] left-[20px] h-full object-cover rounded-2xl shadow-md z-10"
-    onError={(e) => { e.target.src = '/assets/placeholder.jpg'; }}
-  />
+            {/* Video (replacing the image) */}
+            <video
+              src="/assets/AllServicesProvided.mp4" // Replace with your actual video file path in public/assets
+              className="absolute inset-0 w-[450px] h-[550px] top-[25px] left-[20px] object-cover rounded-2xl shadow-md z-10"
+              autoPlay
+              loop
+              muted
+              playsInline
+              onError={(e) => { e.target.poster = '/assets/placeholder.jpg'; }}
+            />
 
-  {/* Light Purple Overlay */}
-  <div className="absolute inset-0 bg-purple-300 opacity-20 rounded-2xl z-10" />
-</div>
+            {/* Light Purple Overlay */}
+            <div className="absolute inset-0 bg-purple-300 opacity-20 rounded-2xl z-10" />
+          </div>
 
           {/* Right Side - Content */}
-          <div className="flex-1  p-6 rounded-2xl ">
+          <div className="flex-1 p-6 rounded-2xl">
             {/* Quote Icon */}
             <div className="flex justify-end mb-4">
               <svg
@@ -55,18 +54,19 @@ const About = () => {
             <div className="space-y-6">
               {/* Our Infrastructure */}
               <div>
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-purple-800 ">
+                <h3 className="text-2xl font-semibold text-purple-800 mb-4">
                   Our Infrastructure
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed text-purple-600">
+                <p className="text-lg text-purple-600 leading-relaxed">
                   We utilize state-of-the-art solvent and eco-solvent printing
                   machines with a capacity of up to 26,000 sq.ft of solvent
                   printing and 2,400 sq.ft of eco-solvent printing daily.
                 </p>
-                <h4 className="font-semibold text-gray-800 mt-4 mb-2 text-purple-800">
+                <h4 className="font-semibold text-purple-800 mt-4 mb-2">
                   Machines in Use:
+styles:
                 </h4>
-                <ul className="list-disc pl-6 text-gray-700 text-purple-600">
+                <ul className="list-disc pl-6 text-purple-600">
                   <li>Colorjet POLO HQ Eco-Solvent Printer (10' width)</li>
                   <li>Colorjet Irisjet PRO Solvent Printer</li>
                   <li>Roland RF-640A Eco Solvent Printer</li>
@@ -78,10 +78,10 @@ const About = () => {
 
               {/* Designing */}
               <div className="mt-8">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-purple-800">
+                <h3 className="text-2xl font-semibold text-purple-800 mb-4">
                   Designing
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed text-purple-600">
+                <p className="text-lg text-purple-600 leading-relaxed">
                   Our team of highly qualified and experienced designers uses
                   the latest software and cutting-edge machinery to deliver
                   exceptional and precise designs for any project scale.
