@@ -2,40 +2,37 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="py-16 bg-purple-100">
-      <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-purple-800">
-          About Us
-        </h2>
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
-          {/* Left Side - Video with Overlay */}
-          <div className="relative w-full max-w-[488px] h-[600px] bg-violet-50 rounded-2xl overflow-hidden mx-auto">
-  {/* Background Ellipses */}
-  <div className="absolute inset-0">
-    <div className="absolute w-[484px] h-[484px] left-[-215px] top-[-246px] bg-indigo-400 rounded-full z-0" />
-    <div className="absolute w-[362px] h-[362px] left-[50%] translate-x-[-50%] top-[65%] sm:left-[307px] sm:top-[265px] bg-red-300 rounded-full z-0" />
-  </div>
+    <div id="about" className="py-16 bg-purple-100 flex items-center justify-center min-h-screen">
+      <div className="container mx-auto mx-4 md:mx-0"> {/* Mobile: Adds 16px margin on both sides for mobile, no margin on desktop */}
+        <h2 className="text-4xl font-bold text-center mb-12 text-purple-800 mx-4 md:mx-0"> {/* Mobile: Adds 16px margin on both sides for mobile, no margin on desktop */} About Us</h2>
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 mx-4 md:mx-0"> {/* Mobile: Adds 16px margin on both sides for mobile, no margin on desktop; Desktop: Centers content horizontally within max-w-6xl */}
+          {/* Left Side - Video with Overlay (Card 1) */}
+          <div className="flex-1 relative max-w-[488px] h-[360px] md:h-[600px] bg-violet-50 rounded-2xl overflow-hidden">
+            {/* Background Ellipses */}
+            <div className="absolute inset-0">
+              <div className="absolute w-[484px] h-[484px] left-[-215px] top-[-246px] bg-indigo-400 rounded-full z-0" />
+              <div className="absolute w-[362px] h-[362px] left-[50%] translate-x-[-50%] top-[65%] sm:left-[307px] sm:top-[265px] bg-red-300 rounded-full z-0" />
+            </div>
 
-  {/* Video */}
-  <video
-  src="/assets/AllServicesProvided.mp4"
-  className="absolute inset-0 w-full max-w-[330px] sm:w-[330px] h-auto sm:h-[650px] top-0 sm:top-[-12px] left-1/2 transform -translate-x-1/2 object-cover rounded-2xl shadow-md z-10"
-  autoPlay
-  loop
-  muted
-  playsInline
-  onError={(e) => { e.target.poster = '/assets/placeholder.jpg'; }}
-/>
+            {/* Video */}
+            <video
+              src="/assets/AllServicesProvided.mp4"
+              className="absolute inset-0 w-full max-w-[330px] h-auto max-h-[360px] md:max-h-[650px] top-0 left-1/2 transform -translate-x-1/2 object-cover rounded-2xl shadow-md z-10"
+              autoPlay
+              loop
+              muted
+              playsInline
+              onError={(e) => { e.target.poster = '/assets/placeholder.jpg'; }}
+            />
 
-  {/* Light Purple Overlay */}
-  <div className="absolute inset-0 bg-purple-300 opacity-20 rounded-2xl z-20" />
-</div>
+            {/* Light Purple Overlay */}
+            <div className="absolute inset-0 bg-purple-300 opacity-20 rounded-2xl z-20" />
+          </div>
 
-
-          {/* Right Side - Content */}
-          <div className="flex-1 p-6 rounded-2xl">
+          {/* Middle - Content (Article) (Card 2) */}
+          <div className="flex-1 p-6 rounded-2xl bg-white shadow-md text-center max-w-[488px] md:max-w-[488px]">
             {/* Quote Icon */}
-            <div className="flex justify-end mb-4">
+            <div className="flex justify-center mb-4">
               <svg
                 width="87"
                 height="60"
@@ -52,37 +49,36 @@ const About = () => {
             </div>
 
             {/* Content */}
-            <div className="space-y-6">
+            <div className="space-y-6 h-full flex flex-col justify-center">
               {/* Our Infrastructure */}
               <div>
-                <h3 className="text-2xl font-semibold text-purple-800 mb-4">
+                <h3 className="text-2xl font-semibold text-purple-800 mb-4 text-center">
                   Our Infrastructure
                 </h3>
-                <p className="text-lg text-purple-600 leading-relaxed">
+                <p className="text-lg text-purple-600 leading-relaxed text-center">
                   We utilize state-of-the-art solvent and eco-solvent printing
                   machines with a capacity of up to 26,000 sq.ft of solvent
                   printing and 2,400 sq.ft of eco-solvent printing daily.
                 </p>
-                <h4 className="font-semibold text-purple-800 mt-4 mb-2">
+                <h4 className="font-semibold text-purple-800 mt-4 mb-2 text-center">
                   Machines in Use:
-styles:
                 </h4>
-                <ul className="list-disc pl-6 text-purple-600">
-                  <li>Colorjet POLO HQ Eco-Solvent Printer (10' width)</li>
-                  <li>Colorjet Irisjet PRO Solvent Printer</li>
-                  <li>Roland RF-640A Eco Solvent Printer</li>
-                  <li>Graphtech Cutting Plotter</li>
-                  <li>Lamination Machine</li>
-                  <li>Seeming Machines</li>
+                <ul className="list-disc pl-6 text-purple-600 text-center">
+                  <li className="inline-block w-full ">Colorjet POLO HQ Eco-Solvent Printer <br /> (10' width)</li>
+                  <li className="inline-block w-full ">Colorjet Irisjet PRO Solvent Printer</li>
+                  <li className="inline-block w-full ">Roland RF-640A Eco Solvent Printer</li>
+                  <li className="inline-block w-full ">Graphtech Cutting Plotter</li>
+                  <li className="inline-block w-full ">Lamination Machine</li>
+                  <li className="inline-block w-full ">Seeming Machines</li>
                 </ul>
               </div>
 
               {/* Designing */}
               <div className="mt-8">
-                <h3 className="text-2xl font-semibold text-purple-800 mb-4">
+                <h3 className="text-2xl font-semibold text-purple-800 mb-4 text-center">
                   Designing
                 </h3>
-                <p className="text-lg text-purple-600 leading-relaxed">
+                <p className="text-lg text-purple-600 leading-relaxed text-center">
                   Our team of highly qualified and experienced designers uses
                   the latest software and cutting-edge machinery to deliver
                   exceptional and precise designs for any project scale.
@@ -91,9 +87,32 @@ styles:
             </div>
 
             {/* Rating Section */}
-            <p className="mt-4 text-right text-sm text-purple-400 font-medium">
+            <p className="mt-4 text-center text-sm text-purple-400 font-medium">
               Print Sapphire Team, Printing Experts
             </p>
+          </div>
+
+          {/* Right Side - Video with Overlay (Card 3) */}
+          <div className="flex-1 relative max-w-[488px] h-[360px] md:h-[600px] bg-violet-50 rounded-2xl overflow-hidden">
+            {/* Background Ellipses */}
+            <div className="absolute inset-0">
+              <div className="absolute w-[484px] h-[484px] left-[-215px] top-[-246px] bg-indigo-400 rounded-full z-0" />
+              <div className="absolute w-[362px] h-[362px] left-[50%] translate-x-[-50%] top-[65%] sm:left-[307px] sm:top-[265px] bg-red-300 rounded-full z-0" />
+            </div>
+
+            {/* Video */}
+            <video
+              src="/assets/Video2.mp4" // Replace with another video path if needed, e.g., "/assets/AnotherVideo.mp4"
+              className="absolute inset-0 w-full max-w-[330px] h-auto max-h-[360px] md:max-h-[650px] top-0 left-1/2 transform -translate-x-1/2 object-cover rounded-2xl shadow-md z-10"
+              autoPlay
+              loop
+              muted
+              playsInline
+              onError={(e) => { e.target.poster = '/assets/placeholder.jpg'; }}
+            />
+
+            {/* Light Purple Overlay */}
+            <div className="absolute inset-0 bg-purple-300 opacity-20 rounded-2xl z-20" />
           </div>
         </div>
       </div>
