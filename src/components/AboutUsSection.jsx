@@ -9,27 +9,28 @@ const About = () => {
         </h2>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
           {/* Left Side - Video with Overlay */}
-          <div className="relative w-[488px] h-[600px] bg-violet-50 rounded-2xl overflow-hidden">
-            {/* Background Ellipses */}
-            <div className="absolute inset-0">
-              <div className="absolute w-[484px] h-[484px] left-[-215px] top-[-246px] bg-indigo-400 rounded-full z-0" />
-              <div className="absolute w-[362px] h-[362px] left-[307px] top-[265px] bg-red-300 rounded-full z-0" />
-            </div>
+          <div className="relative w-full max-w-[488px] h-[600px] bg-violet-50 rounded-2xl overflow-hidden mx-auto">
+  {/* Background Ellipses */}
+  <div className="absolute inset-0">
+    <div className="absolute w-[484px] h-[484px] left-[-215px] top-[-246px] bg-indigo-400 rounded-full z-0" />
+    <div className="absolute w-[362px] h-[362px] left-[50%] translate-x-[-50%] top-[65%] sm:left-[307px] sm:top-[265px] bg-red-300 rounded-full z-0" />
+  </div>
 
-            {/* Video (replacing the image) */}
-            <video
-              src="/assets/AllServicesProvided.mp4" // Replace with your actual video file path in public/assets
-              className="absolute inset-0 w-[450px] h-[550px] top-[25px] left-[20px] object-cover rounded-2xl shadow-md z-10"
-              autoPlay
-              loop
-              muted
-              playsInline
-              onError={(e) => { e.target.poster = '/assets/placeholder.jpg'; }}
-            />
+  {/* Video */}
+  <video
+  src="/assets/AllServicesProvided.mp4"
+  className="absolute inset-0 w-full max-w-[330px] sm:w-[330px] h-auto sm:h-[650px] top-0 sm:top-[-12px] left-1/2 transform -translate-x-1/2 object-cover rounded-2xl shadow-md z-10"
+  autoPlay
+  loop
+  muted
+  playsInline
+  onError={(e) => { e.target.poster = '/assets/placeholder.jpg'; }}
+/>
 
-            {/* Light Purple Overlay */}
-            <div className="absolute inset-0 bg-purple-300 opacity-20 rounded-2xl z-10" />
-          </div>
+  {/* Light Purple Overlay */}
+  <div className="absolute inset-0 bg-purple-300 opacity-20 rounded-2xl z-20" />
+</div>
+
 
           {/* Right Side - Content */}
           <div className="flex-1 p-6 rounded-2xl">
