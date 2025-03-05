@@ -2,40 +2,42 @@ import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="py-16 bg-purple-100 flex items-center justify-center min-h-screen">
-      <div className="container mx-auto mx-4 md:mx-0"> {/* Mobile: Adds 16px margin on both sides for mobile, no margin on desktop */}
-        <h2 className="text-4xl font-bold text-center mb-12 text-purple-800 mx-4 md:mx-0"> {/* Mobile: Adds 16px margin on both sides for mobile, no margin on desktop */} About Us</h2>
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 mx-4 md:mx-0"> {/* Mobile: Adds 16px margin on both sides for mobile, no margin on desktop; Desktop: Centers content horizontally within max-w-6xl */}
+    <div id="about" className="py-16 bg-purple-100">
+      <div className="container mx-auto"> {/* Mobile: Adds 16px margin on both sides for mobile, no margin on desktop */}
+        <h2 className="text-4xl font-bold text-center mb-12 text-purple-800"> About Us</h2>
+        <div className="max-w-8xl mx-auto flex flex-col md:flex-row gap-8 items-center justify-center">
           {/* Left Side - Video with Overlay (Card 1) */}
-          <div className="flex-1 relative max-w-[488px] h-[360px] md:h-[600px] bg-violet-50 rounded-2xl overflow-hidden">
+          <div className="flex-1 relative w-full md:max-w-[488px] h-[360px] md:h-[600px] bg-violet-50 rounded-2xl overflow-hidden mx-auto">
             {/* Background Ellipses */}
             <div className="absolute inset-0">
-              <div className="absolute w-[484px] h-[484px] left-[-215px] top-[-246px] bg-indigo-400 rounded-full z-0" />
-              <div className="absolute w-[362px] h-[362px] left-[50%] translate-x-[-50%] top-[65%] sm:left-[307px] sm:top-[265px] bg-red-300 rounded-full z-0" />
+            <div className="absolute w-[484px] h-[484px] left-[-215px] top-[-246px] bg-indigo-400 rounded-full z-0" />
+            <div className="absolute w-[362px] h-[362px] left-[50%] translate-x-[-50%] top-[65%] sm:left-[307px] sm:top-[265px] bg-red-300 rounded-full z-0" />
             </div>
 
             {/* Video */}
+            <div className=" inset-0 flex justify-center items-center">
             <video
+            // "w-full h-full md:max-w-[330px] md:h-[650px] md:top-[-12px] md:left-1/2 md:transform md:-translate-x-1/2 object-cover rounded-2xl shadow-md z-10
               src="/assets/AllServicesProvided.mp4"
-              className="absolute inset-0 w-full max-w-[330px] h-auto max-h-[360px] md:max-h-[650px] top-0 left-1/2 transform -translate-x-1/2 object-cover rounded-2xl shadow-md z-10"
+              className="w-full h-full object-cover sm:w-[330px] sm:h-[600px] rounded-2xl shadow-md z-10"
               autoPlay
               loop
               muted
               playsInline
               onError={(e) => { e.target.poster = '/assets/placeholder.jpg'; }}
             />
-
+           </div>
             {/* Light Purple Overlay */}
             <div className="absolute inset-0 bg-purple-300 opacity-20 rounded-2xl z-20" />
           </div>
 
           {/* Middle - Content (Article) (Card 2) */}
-          <div className="flex-1 p-6 rounded-2xl bg-white shadow-md text-center max-w-[488px] md:max-w-[488px]">
+          <div className="p-5 rounded-3xl bg-white shadow-md text-center w-full sm:max-w-[688px] md:max-w-[488px] flex-shrink-0">
             {/* Quote Icon */}
             <div className="flex justify-center mb-4">
               <svg
                 width="87"
-                height="60"
+                height="40"
                 viewBox="0 0 87 70"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -88,32 +90,35 @@ const About = () => {
 
             {/* Rating Section */}
             <p className="mt-4 text-center text-sm text-purple-400 font-medium">
-              Print Sapphire Team, Printing Experts
+            Print Sapphire Team, Printing Experts
             </p>
           </div>
 
           {/* Right Side - Video with Overlay (Card 3) */}
-          <div className="flex-1 relative max-w-[488px] h-[360px] md:h-[600px] bg-violet-50 rounded-2xl overflow-hidden">
-            {/* Background Ellipses */}
-            <div className="absolute inset-0">
-              <div className="absolute w-[484px] h-[484px] left-[-215px] top-[-246px] bg-indigo-400 rounded-full z-0" />
-              <div className="absolute w-[362px] h-[362px] left-[50%] translate-x-[-50%] top-[65%] sm:left-[307px] sm:top-[265px] bg-red-300 rounded-full z-0" />
-            </div>
+          <div className="flex-1 relative w-full max-w-[488px] h-[360px] md:h-[600px] bg-violet-50 rounded-2xl overflow-hidden mx-auto">
+  {/* Background Ellipses */}
+  <div className="absolute inset-0">
+    <div className="absolute w-[484px] h-[484px] left-[-215px] top-[-246px] bg-indigo-400 rounded-full z-0" />
+    <div className="absolute w-[362px] h-[362px] left-[50%] translate-x-[-50%] top-[65%] sm:left-[307px] sm:top-[265px] bg-red-300 rounded-full z-0" />
+  </div>
 
-            {/* Video */}
-            <video
-              src="/assets/Video2.mp4" // Replace with another video path if needed, e.g., "/assets/AnotherVideo.mp4"
-              className="absolute inset-0 w-full max-w-[330px] h-auto max-h-[360px] md:max-h-[650px] top-0 left-1/2 transform -translate-x-1/2 object-cover rounded-2xl shadow-md z-10"
-              autoPlay
-              loop
-              muted
-              playsInline
-              onError={(e) => { e.target.poster = '/assets/placeholder.jpg'; }}
-            />
+  {/* Video */}
+  <div className=" inset-0 flex justify-center items-center">
+    <video
+      src="/assets/Video2.mp4"
+      className="w-full h-full object-cover sm:w-[330px] sm:h-[600px] rounded-2xl shadow-md z-10"
+      autoPlay
+      loop
+      muted
+      playsInline
+      onError={(e) => { e.target.poster = '/assets/placeholder.jpg'; }}
+    />
+  </div>
 
-            {/* Light Purple Overlay */}
-            <div className="absolute inset-0 bg-purple-300 opacity-20 rounded-2xl z-20" />
-          </div>
+  {/* Light Purple Overlay */}
+  <div className="absolute inset-0 bg-purple-300 opacity-20 rounded-2xl z-20" />
+</div>
+
         </div>
       </div>
     </div>
